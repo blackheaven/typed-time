@@ -1,0 +1,75 @@
+name:                typed-time
+version:             0.1.0.0
+github:              "blackheaven/typed-time"
+license:             ISC
+author:              "Gautier DI FOLCO"
+maintainer:          "gautier.difolco@gmail.com"
+copyright:           "Gautier DI FOLCO"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+- LICENSE
+
+# Metadata used when publishing your package
+synopsis:            A strongly typed way to handle time and date formats
+category:            Time
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description: |
+  Simple type-safe wrapper for <https://hackage.haskell.org/package/time time>'s
+  <https://hackage.haskell.org/package/time-1.11.1.2/docs/Data-Time-Format.html Data.Time.Format>.
+
+  You are are to represent a sound formatting at type-level:
+
+
+  @
+  myInput :: 'FormattedTime' 'RFC822'
+  @
+
+dependencies:
+- base >= 4.7 && < 5
+- time >= 1.11.1.2 && < 1.12
+
+library:
+  source-dirs: src
+
+tests:
+  typed-time-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -Wall
+    - -Wcompat
+    - -Widentities
+    - -Wincomplete-record-updates
+    - -Wincomplete-uni-patterns
+    - -Wpartial-fields
+    - -Wredundant-constraints
+    - -Werror
+    dependencies:
+    - typed-time
+
+tests:
+  typed-time-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    - -Wall
+    - -Wcompat
+    - -Widentities
+    - -Wincomplete-record-updates
+    - -Wincomplete-uni-patterns
+    - -Wpartial-fields
+    - -Wredundant-constraints
+    - -Werror
+    dependencies:
+    - typed-time
+    - hspec >= 2.7.8 && < 2.8
+    - hspec-core >= 2.7.8 && < 2.8
+    - time
