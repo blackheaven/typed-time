@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 95a052e72a55c3596bb71eabf680307287b2a70e93a056d8779e5ebede6cc038
+-- hash: 4c6e0d12cf6872b61a4aa0a619631c94f0a65d773afccb4e72e54cf39672f0c5
 
 name:           typed-time
 version:        0.1.0.0
@@ -57,7 +57,7 @@ test-suite typed-time-test
       Paths_typed_time
   hs-source-dirs:
       test
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wpartial-fields -Wredundant-constraints -Werror
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wpartial-fields -Wredundant-constraints
   build-depends:
       base >=4.7 && <5
     , hspec >=2.7.8 && <2.8
